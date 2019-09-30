@@ -1,0 +1,322 @@
+html,body{
+    height:100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+h1{
+    margin: 0;
+    font-size:3em;
+    font-family: 'Goudy Bookletter 1911';
+}
+
+h2{
+    font-family: 'Goudy Bookletter 1911';
+}
+
+p{
+    font-family: 'Arvo';
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.avLogo{
+    position: fixed;
+    width: 60px;
+    height: 90px;
+    padding: 0px 0px 0px 15px;
+    min-width: 60px;
+    min-height: 90px;
+    z-index: 5;
+}
+
+
+.socialIcon{
+    border-radius: 50%;
+    height: auto;
+    width: 5vh;
+    padding: 0vh 2vh 0vh 2vh;
+}
+
+.socialBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+
+.socialBarVertical{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.socialBarVerticalActive{
+    display: flex;
+    opacity: 1;
+}
+
+.navBarVertical{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.navBarVerticalOffset{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 37%;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background:black;
+    color: gainsboro;
+    padding: 15px
+
+}
+
+.intro{
+    width:100%;
+    height:100vh;
+    font-family: 'Goudy Bookletter 1911';
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#idCardMain, #education, #projects{
+    background-image: #616161;
+}
+
+#skills, #experience{
+    background: #f5f5f5;
+}
+
+.content h1{
+    padding-bottom: 10vh
+}
+
+.socialBarVertical a{
+    padding: 10px 0px 0px 0px;
+
+}
+
+
+.glow {
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+	
+}.glow:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(251, 251, 252, 0.8));
+
+}
+
+
+.glowBlue {
+	-webkit-filter: drop-shadow(0px 0px 0px  rgba(3, 107, 241, 0.8));
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+	
+}.glowBlue:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(3, 107, 241, 0.8));
+
+}
+
+
+section .content{
+    padding: 90px;
+}
+
+.card, .card img{
+    width:50vh;
+    height:25vh;
+    transition: all 0.2s linear
+}
+
+.card img{
+    position: relative;
+    border-radius: 2%;
+    transition: all 0.3s linear;
+}
+
+.card h2, p{
+    padding: 0px 20px 0px 20px
+}
+
+.card:hover img{
+    opacity: 0.1;
+    background-color: blue
+
+}
+
+.card:hover{
+    border: 2px solid black;
+    border-radius: 3%;
+}
+.card div{
+    position: relative;
+    color: black;
+    bottom: 75%;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.card:hover div{
+    opacity: 0.9;
+    
+}
+
+.card div hr{
+    border: none;
+    border-bottom: solid 2px black;
+    width: 0px;
+    transition: all 0.5s;
+    bottom: 50px; 
+    left:0px;
+}
+
+.card:hover div hr{
+    border: none;
+    border-bottom: solid 2px black;
+    width: 400px;
+    transition-delay: 0.2s;
+}
+
+.projectLink{
+    text-decoration: none;
+    padding: 25px;
+}
+
+
+.flexProject{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.centeredText{
+    text-align: center;
+}
+
+.skillsLogo, .technologiesLogo{
+    width: 5vh;
+    height: 5vh;
+    padding: 25px;
+}
+
+
+.id-card-left{
+    background: skyblue;
+    height: 400px;
+    width: 215px;
+}
+.id-card-right{
+    background: #f5f5f5;
+    height: 400px;
+    width: 515px;
+    text-align: justify;
+}
+
+.id-card-left img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+.id-card-left h2{
+    text-align: center;
+}
+
+
+.hideOnHover{
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+
+
+.showOnHover{
+    position: relative; 
+    bottom: 70%; 
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+
+.language{
+    display: inline;
+    border-radius: 37px;
+    border: 1.5px solid black;
+    padding: 15px;
+    margin: 4px 2px;
+    color: black;
+    font-family: 'Arvo'
+}
+
+
+
+.timelineContent{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center
+}
+
+
+.timelineItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navInactive{
+    opacity: 0;
+    transition: opacity 0.3s ease
+}
+
+.navActive{
+    opacity: 1;
+}
