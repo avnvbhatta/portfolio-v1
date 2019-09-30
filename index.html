@@ -2,47 +2,48 @@
 <html>
 
 <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/myScripts.js"></script>
-    <link href="//fonts.googleapis.com/css?family=Archivo|Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo|Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
-    <link href='//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet'
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet'
         type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="/js/granim.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 </head>
 
 <body>
     <canvas id="granim-canvas" style="position: absolute; z-index: -1;"></canvas>
-
-    <a href="#intro"><img id="avLogo" class="avLogo glow" src="img/av-logo.svg" alt="av-logo"></a>
-    <div class="socialBarVertical" id="socialBarVertical">
-        <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow"
+        <div class="navBar" style="position: fixed; display: flex; flex-direction: column; justify-content: flex-start; padding: 15px">
+            <img id="avLogo" class="navIcon glow" src="img/av-logo.svg" alt="av-logo"></a>
+            <a class="navHidden" href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="navIcon canHide glow"
                 src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
-        <a href="https://github.com/avnvbhatta"><img class="socialIcon glow" src="/img/github-logo.png"
-                alt="github-logo"></a>
-        <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow" src="/img/pdf-logo.png"
-                alt="email-logo"></a>
-        <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png"
-                alt="email-logo"></a>
-    </div>
-    <div id="navBarVertical" class="navBarVertical">
-            <a id="navAbout" class="navActive" href="#idCardMain"><img class="socialIcon glow" src="/img/about.svg" alt="email-logo"></a>
-            <a id="navSkills" class="navActive" href="#skills"><img class="socialIcon glow" src="/img/skills-code.svg" alt="email-logo" style="border-radius: 0"></a>
-            <a id="navEducation" class="navActive" href="#education"><img class="socialIcon glow" src="/img/education.svg" alt="email-logo"></a>
-            <a id="navExperience" class="navActive" href="#experience"><img class="socialIcon glow" src="/img/work.svg" alt="email-logo"></a>
-            <a id="navProjects" class="navActive" href="#projects"><img class="socialIcon glow" src="/img/projects.svg" alt="email-logo"></a>
-    </div>
+            <a class="navHidden" href="https://github.com/avnvbhatta"><img class="navIcon glow" src="/img/github-logo.png"
+                    alt="github-logo"></a>
+            <a class="navHidden" href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="navIcon glow" src="/img/pdf-logo.png"
+                    alt="email-logo"></a>
+            <a class="navHidden" href="mailto:avnvbhatta@gmail.com"><img class="navIcon glow" src="/img/email-logo.png"
+                    alt="email-logo"></a>
+
+            <a id="navAbout" class="navActive" href="#idCardMain"><img class="navIcon glow" src="/img/about.svg" alt="email-logo"></a>
+            <a id="navSkills" class="navActive" href="#skills"><img class="navIcon glow" src="/img/skills-code.svg" alt="email-logo" style="border-radius: 0"></a>
+            <a id="navEducation" class="navActive" href="#education"><img class="navIcon glow" src="/img/education.svg" alt="email-logo"></a>
+            <a id="navExperience" class="navActive" href="#experience"><img class="navIcon glow" src="/img/work.svg" alt="email-logo"></a>
+            <a id="navProjects" class="navActive" href="#projects"><img class="navIcon glow" src="/img/projects.svg" alt="email-logo"></a>
+        </div>
+
+
+
     <div id="main" class="container">
         <section id="intro" class="intro">
             <div style="display: flex; flex-direction: column; padding: 90px">
-                <h1>Hi. I'm Abhinav, and I like web design.</h1>
+                <h1 class="titleHeading">Hi. I'm Abhinav, and I like web design.</h1>
                 <div class="socialBar">
                     <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow"
                             src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
@@ -56,15 +57,17 @@
             </div>
         </section>
 
+
         <section id="idCardMain" class="mySection">
             <div class="content centeredText">
-                    <h1>- About -</h2>
+                    <h1 class="titleHeading">- About -</h2>
             <div class="idCard" >
-                <div class="id-card-left" >
-                    <img src="/img/me.PNG" class="id-card-photo" alt="me">
+                <div class="id-card-left" style="display: flex; flex-direction: column; justify-content: center;
+                        align-items: center;">
+                    <img src="/img/me.PNG" style="position: absolute; border: 2px solid white" alt="me">
                     <div style="position: relative; top: 35%; text-align: center">
                         <h2>Web Developer</h2>
-                        <p style="position: relative; top: -16%"><img class="id-card-location" src="/img/location-icon.svg"
+                        <p style="position: relative; top: -16%"><img src="/img/location-icon.svg"
                                 style="width:12px; height:20px" alt=""> Stockton, CA</p>
                     </div>
 
@@ -101,7 +104,7 @@
 
         <section id="skills" class="mySection">
             <div class="content centeredText">
-                <h1>- Skills -</h2>
+                <h1 class="titleHeading">- Skills -</h2>
             
             <div style="display:flex; flex-direction: column; justify-content: space-evenly">
                     <div style="display:flex; flex-direction: column; 
@@ -142,7 +145,7 @@
 
         <section id="education" class="mySection">
                 <div class="content centeredText">
-                    <h1>- Education -</h2>
+                    <h1 class="titleHeading">- Education -</h2>
                     <div class="timelineContent">
                             <div class="timelineItem">
                                 <img class="skillsLogo" src="/img/education.svg" alt="">
@@ -161,7 +164,7 @@
 
             <section id="experience" class="mySection">
                     <div class="content centeredText">
-                        <h1>- Experience -</h2>
+                        <h1 class="titleHeading">- Experience -</h2>
                         <div class="timelineContent">
                                 <div class="timelineItem">
                                     <img class="skillsLogo" src="/img/work.svg" alt="">
@@ -187,7 +190,7 @@
 
         <section id="projects" class="mySection">
             <div class="content centeredText"> 
-                <h1>- Projects -</h1>
+                <h1 class="titleHeading">- Projects -</h1>
                 <img class="skillsLogo" src="/img/projects.svg" alt="">
             <div class="flexProject">    
                 <a class="projectLink" href="https://moodmate.herokuapp.com">

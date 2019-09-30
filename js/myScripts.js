@@ -26,26 +26,19 @@ $(document).ready(function() {
   var mainHeight = $("#main").first().outerHeight();
   var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2+1000}});
 	// build scenes
-	var socialBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
-          .setClassToggle("#socialBarVertical", "socialBarVerticalActive") // add class toggle
+	var navBar = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
+          .setClassToggle(".navBar .navHidden ", "navUnhidden") // add class toggle
           .addTo(controller);
-  
-  var navBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
-          .setClassToggle("#navBarVertical", "navBarVerticalOffset") // add class toggle
-          .addTo(controller);
+
           
-  var toggleAll = new ScrollMagic.Scene({triggerElement: "#idCardMain", duration: mainHeight})
+  var toggleGlow = new ScrollMagic.Scene({triggerElement: "#idCardMain", duration: mainHeight})
           .setClassToggle(".glow", "glowBlue") // add class toggle
 					.addTo(controller);
 
           // get the current offset
 // set a new offset
-  navBarVertical.offset(200);
-  socialBarVertical.offset(200);
-  toggleAll.offset(50)
-
-
-
+  navBar.offset(200);
+  toggleGlow.offset(50)
 
 });
 
