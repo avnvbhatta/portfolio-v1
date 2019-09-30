@@ -176,8 +176,10 @@ section .content{
 }
 
 .card, .card img{
-    width:50vh;
-    height:25vh;
+    width:450px;
+    height:250px;
+    min-width:450px;
+    min-height:250px;
     transition: all 0.2s linear
 }
 
@@ -254,10 +256,18 @@ section .content{
 }
 
 
+.idCard{
+    display: flex; flex-wrap: wrap;
+}
+
 .id-card-left{
     background: skyblue;
     height: 400px;
     width: 215px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
 }
 .id-card-right{
     background: #f5f5f5;
@@ -266,15 +276,20 @@ section .content{
     text-align: justify;
 }
 
-.id-card-left img{
+.id-card-photo{
     height: 180px;
     width: 180px;
     border-radius: 50%;
+    position: absolute; 
+    border: 2px solid white
 }
 .id-card-left h2{
     text-align: center;
 }
 
+.id-card-location{
+    border: none;
+}
 
 .hideOnHover{
     opacity: 1;
@@ -326,3 +341,4 @@ section .content{
 .navActive{
     opacity: 1;
 }
+
