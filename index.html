@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/myScripts.js"></script>
     <link href="//fonts.googleapis.com/css?family=Archivo|Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
-    <link href='//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
@@ -15,138 +13,130 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="/js/granim.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
 </head>
-
-<body>
-    <canvas id="granim-canvas" style="position: absolute; z-index: -1;"></canvas>
-        <div class="navBar" style="position: fixed; display: flex; flex-direction: column; justify-content: flex-start; padding: 15px">
+    <body>
+        <canvas id="granim-canvas" style="position: absolute; z-index: -1;"></canvas>
+        <div class="navBar">
             <img id="avLogo" class="navIcon glow" src="img/av-logo.svg" alt="av-logo"></a>
-            <a class="navHidden" href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="navIcon canHide glow"
-                src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
-            <a class="navHidden" href="https://github.com/avnvbhatta"><img class="navIcon glow" src="/img/github-logo.png"
+            <a id="navLinkedIn" class="navHidden" href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img
+                    class="navIcon canHide glow" src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
+            <a id="navGithub" class="navHidden" href="https://github.com/avnvbhatta"><img class="navIcon glow" src="/img/github-logo.png"
                     alt="github-logo"></a>
-            <a class="navHidden" href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="navIcon glow" src="/img/pdf-logo.png"
+            <a id="navDownload" class="navHidden" href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="navIcon glow"
+                    src="/img/pdf-logo.png" alt="email-logo"></a>
+            <a id="navEmail" class="navHidden" href="mailto:avnvbhatta@gmail.com"><img class="navIcon glow" src="/img/email-logo.png"
                     alt="email-logo"></a>
-            <a class="navHidden" href="mailto:avnvbhatta@gmail.com"><img class="navIcon glow" src="/img/email-logo.png"
+            <a id="navAbout" class="navActive" href="#idCardMain"><img class="navIcon glow" src="/img/about.svg"
                     alt="email-logo"></a>
-
-            <a id="navAbout" class="navActive" href="#idCardMain"><img class="navIcon glow" src="/img/about.svg" alt="email-logo"></a>
-            <a id="navSkills" class="navActive" href="#skills"><img class="navIcon glow" src="/img/skills-code.svg" alt="email-logo" style="border-radius: 0"></a>
-            <a id="navEducation" class="navActive" href="#education"><img class="navIcon glow" src="/img/education.svg" alt="email-logo"></a>
-            <a id="navExperience" class="navActive" href="#experience"><img class="navIcon glow" src="/img/work.svg" alt="email-logo"></a>
-            <a id="navProjects" class="navActive" href="#projects"><img class="navIcon glow" src="/img/projects.svg" alt="email-logo"></a>
+            <a id="navSkills" class="navActive" href="#skills"><img class="navIcon glow" src="/img/skills-code.svg"
+                    alt="email-logo" style="border-radius: 0"></a>
+            <a id="navEducation" class="navActive" href="#education"><img class="navIcon glow" src="/img/education.svg"
+                    alt="email-logo"></a>
+            <a id="navExperience" class="navActive" href="#experience"><img class="navIcon glow" src="/img/work.svg"
+                    alt="email-logo"></a>
+            <a id="navProjects" class="navActive" href="#projects"><img class="navIcon glow" src="/img/projects.svg"
+                    alt="email-logo"></a>
         </div>
 
-
-
-    <div id="main" class="container">
-        <section id="intro" class="intro">
-            <div style="display: flex; flex-direction: column; padding: 90px">
-                <h1 class="titleHeading">Hi. I'm Abhinav, and I like web design.</h1>
-                <div class="socialBar">
-                    <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow"
-                            src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
-                    <a href="https://github.com/avnvbhatta"><img class="socialIcon glow" src="/img/github-logo.png"
-                            alt="github-logo"></a>
-                    <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow"
-                            src="/img/pdf-logo.png" alt="email-logo"></a>
-                    <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png"
-                            alt="email-logo"></a>
+        <div id="main" class="container">
+            <section id="intro" class="intro">
+                <div style="display: flex; flex-direction: column; padding: 90px">
+                    <h1 class="titleHeading">Hi. I'm Abhinav, and I like web design.</h1>
+                    <div class="socialBar">
+                        <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow"
+                                src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
+                        <a href="https://github.com/avnvbhatta"><img class="socialIcon glow" src="/img/github-logo.png"
+                                alt="github-logo"></a>
+                        <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow"
+                                src="/img/pdf-logo.png" alt="email-logo"></a>
+                        <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png"
+                                alt="email-logo"></a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-
-        <section id="idCardMain" class="mySection">
-            <div class="content centeredText">
+            <section id="idCardMain" class="mySection">
+                <div class="content centeredText">
                     <h1 class="titleHeading">- About -</h2>
-            <div class="idCard" >
-                <div class="id-card-left" style="display: flex; flex-direction: column; justify-content: center;
-                        align-items: center;">
-                    <img src="/img/me.PNG" style="position: absolute; border: 2px solid white" alt="me">
-                    <div style="position: relative; top: 35%; text-align: center">
-                        <h2>Web Developer</h2>
-                        <p style="position: relative; top: -16%"><img src="/img/location-icon.svg"
-                                style="width:12px; height:20px" alt=""> Stockton, CA</p>
-                    </div>
-
-                </div>
-                <div class="id-card-right">
-                    <div class="hideOnHover">
-                        <h1 style="text-align: center; padding: 40px 40px 0px 40px">Abhinav Bhatta</h1>
-
-                        <p style="padding: 20px 40px 0px 40px">I enjoy creating
-                            beautiful, elegant and minimalist designs, and I am really passionate about building fluid,
-                            dynamic and responsive user interfaces.
-                        </p>
-                        <div class="socialBar">
-                            <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow"
-                                    src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
-                            <a href="https://github.com/avnvbhatta"><img class="socialIcon glow" src="/img/github-logo.png"
-                                    alt="github-logo"></a>
-                            <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow"
-                                    src="/img/pdf-logo.png" alt="email-logo"></a>
-                            <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png"
-                                    alt="email-logo"></a>
+                        <div class="idCard">
+                            <div class="id-card-left" style="display: flex; flex-direction: column; justify-content: center;
+                            align-items: center;">
+                                <img src="/img/me.PNG" style="position: absolute; border: 2px solid white" alt="me">
+                                <div style="position: relative; top: 35%; text-align: center">
+                                    <h2>Web Developer</h2>
+                                    <p style="position: relative; top: -16%"><img src="/img/location-icon.svg"
+                                        style="width:12px; height:20px" alt=""> Stockton, CA</p>
+                                </div>
+                            </div>
+                            <div class="id-card-right">
+                                <div class="hideOnHover">
+                                    <h1 style="text-align: center; padding: 40px 40px 0px 40px">Abhinav Bhatta</h1>
+                                    <p style="padding: 20px 40px 0px 40px">I enjoy creating
+                                        beautiful, elegant and minimalist designs, and I am really passionate about building
+                                        fluid, dynamic and responsive user interfaces.
+                                    </p>
+                                    <div class="socialBar">
+                                        <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img
+                                                class="socialIcon glow" src="/img/linkedin-logo.png"
+                                                alt="linkedin-logo"></a>
+                                        <a href="https://github.com/avnvbhatta"><img class="socialIcon glow"
+                                                src="/img/github-logo.png" alt="github-logo"></a>
+                                        <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow"
+                                                src="/img/pdf-logo.png" alt="email-logo"></a>
+                                        <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow"
+                                                src="/img/email-logo.png" alt="email-logo"></a>
+                                    </div>
+                                </div>
+                                <div class="showOnHover">
+                                    <!-- for more content later -->
+                                </div>
+                            </div>
                         </div>
-                    </div>
+            </section>
 
-                    <div class="showOnHover">
-                            <!-- for more content later -->
-                    </div>
-                </div>
-
-
-            </div>
-
-        </section>
-
-        <section id="skills" class="mySection">
-            <div class="content centeredText">
-                <h1 class="titleHeading">- Skills -</h2>
-            
-            <div style="display:flex; flex-direction: column; justify-content: space-evenly">
-                    <div style="display:flex; flex-direction: column; 
-                        justify-content: center; align-items: center;
-                        padding: 20px;
-                        border-radius: 1%;">
-                        <img class="skillsLogo" src="/img/skills.png" alt="">
-                        <div style="display: flex; flex-direction: row; 
-                            flex-wrap: wrap; justify-content: space-evenly">
-                            <div class="language">Java</div>
-                            <div class="language">Angular</div>
-                            <div class="language">React</div>
-                            <div class="language">JavaScript</div>
-                            <div class="language">NodeJS</div>
-                            <div class="language">ExpressJS</div>
-                            <div class="language">HTML</div>
-                            <div class="language">CSS</div>
+            <section id="skills" class="mySection">
+                <div class="content centeredText">
+                    <h1 class="titleHeading">- Skills -</h2>
+                        <div style="display:flex; flex-direction: column; justify-content: space-evenly">
+                            <div style="display:flex; flex-direction: column; 
+                            justify-content: center; align-items: center;
+                            padding: 20px;
+                            border-radius: 1%;">
+                                <img class="skillsLogo" src="/img/skills.png" alt="">
+                                <div style="display: flex; flex-direction: row; 
+                                flex-wrap: wrap; justify-content: space-evenly">
+                                    <div class="language">Java</div>
+                                    <div class="language">Angular</div>
+                                    <div class="language">React</div>
+                                    <div class="language">JavaScript</div>
+                                    <div class="language">NodeJS</div>
+                                    <div class="language">ExpressJS</div>
+                                    <div class="language">HTML</div>
+                                    <div class="language">CSS</div>
+                                </div>
+                            </div>
+                            <div style="display:flex; flex-direction: column; 
+                            justify-content: center; align-items: center;
+                            padding: 20px;
+                            border-radius: 1%;">
+                                <img class="skillsLogo" src="/img/techologies.png" alt="">
+                                <div style="display: flex; flex-direction: row; 
+                                flex-wrap: wrap; justify-content: space-evenly">
+                                    <div class="language">Eclipse</div>
+                                    <div class="language">VS Code</div>
+                                    <div class="language">Android Studio</div>
+                                    <div class="language">Microsoft SSMS</div>
+                                    <div class="language">JIRA</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div style="display:flex; flex-direction: column; 
-                        justify-content: center; align-items: center;
-                        padding: 20px;
-                        border-radius: 1%;">
-                        <img class="skillsLogo" src="/img/techologies.png" alt="">
-                        <div style="display: flex; flex-direction: row; 
-                            flex-wrap: wrap; justify-content: space-evenly">
-                            <div class="language">Eclipse</div>
-                            <div class="language">VS Code</div>
-                            <div class="language">Android Studio</div>
-                            <div class="language">Microsoft SSMS</div>
-                            <div class="language">JIRA</div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-
-        <section id="education" class="mySection">
+            <section id="education" class="mySection">
                 <div class="content centeredText">
                     <h1 class="titleHeading">- Education -</h2>
-                    <div class="timelineContent">
+                        <div class="timelineContent">
                             <div class="timelineItem">
                                 <img class="skillsLogo" src="/img/education.svg" alt="">
                                 <h2>University of Maine</h2>
@@ -156,87 +146,75 @@
                                 <h2>University of the Pacific</h2>
                                 <p>Master's Degree in Engineering Science</p>
                             </div>
-                    </div>
-                    
-                
+                        </div>
                 </div>
             </section>
 
             <section id="experience" class="mySection">
-                    <div class="content centeredText">
-                        <h1 class="titleHeading">- Experience -</h2>
+                <div class="content centeredText">
+                    <h1 class="titleHeading">- Experience -</h2>
                         <div class="timelineContent">
-                                <div class="timelineItem">
-                                    <img class="skillsLogo" src="/img/work.svg" alt="">
-                                    <h2>University of Maine System</h2>
-                                    <p>Student SQL Programmer</p>
+                            <div class="timelineItem">
+                                <img class="skillsLogo" src="/img/work.svg" alt="">
+                                <h2>University of Maine System</h2>
+                                <p>Student SQL Programmer</p>
+                            </div>
+                            <div class="timelineItem">
+                                <h2>Nationwide Insurance</h2>
+                                <p>Application Developer Intern</p>
+                            </div>
+                            <div class="timelineItem">
+                                <h2>TR3 Solutions Inc.</h2>
+                                <p>Software Developer</p>
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <section id="projects" class="mySection">
+                <div class="content centeredText">
+                    <h1 class="titleHeading">- Projects -</h1>
+                    <img class="skillsLogo" src="/img/projects.svg" alt="">
+                    <div class="flexProject">
+                        <a class="projectLink" href="https://moodmate.herokuapp.com">
+                            <div class="card">
+                                <img src="/img/moodmate.png" alt="moodmate">
+                                <div>
+                                    <h2>Moodmate</h2>
+                                    <hr>
+                                    <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS. Used Spotify Web
+                                        API.
+                                    </p>
                                 </div>
-                                <div class="timelineItem">
-                                        <h2>Nationwide Insurance</h2>
-                                        <p>Application Developer Intern</p>
-                                    </div>
-                                <div class="timelineItem">
-                                    <h2>TR3 Solutions Inc.</h2>
-                                    <p>Software Developer</p>
+                            </div>
+                        </a>
+                        <a class="projectLink" href="https://sajjanrajvaidya-b7e09.firebaseapp.com/">
+                            <div class="card">
+                                <img src="/img/sajjan.png" alt="sajjan">
+                                <div>
+                                    <h2>Sajjan Raj Vaidya Website</h2>
+                                    <hr>
+                                    <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS. Implemented
+                                        MailchimpAPI and NodemailerAPI</p>
                                 </div>
-    
-                        </div>
-                        
-                    
+                            </div>
+                        </a>
                     </div>
-                </section>
+                </div>
+            </section>
 
-        
-
-        <section id="projects" class="mySection">
-            <div class="content centeredText"> 
-                <h1 class="titleHeading">- Projects -</h1>
-                <img class="skillsLogo" src="/img/projects.svg" alt="">
-            <div class="flexProject">    
-                <a class="projectLink" href="https://moodmate.herokuapp.com">
-                    <div class="card">
-                        <img src="/img/moodmate.png" alt="moodmate">
-                        <div>
-                            <h2>Moodmate</h2>
-                            <hr>
-                            <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS. Used Spotify Web API.
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="projectLink" href="https://sajjanrajvaidya-b7e09.firebaseapp.com/">
-                    <div class="card">
-                        <img src="/img/sajjan.png" alt="sajjan">
-                        <div>
-                            <h2>Sajjan Raj Vaidya Website</h2>
-                            <hr>
-                            <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS. Implemented MailchimpAPI and NodemailerAPI</p>
-                        </div>
-                    </div>
-                </a>
+            <br>
+            <div class="footer">
+                <p>Copyright Abhinav Bhatta</p>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
+                    <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>,
+                    <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a>,
+                    <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a>,
+                    <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a>,
+                    <a href="https://www.flaticon.com/authors/retinaicons" title="Retinaicons">Retinaicons</a>,
+                    <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </div>
         </div>
-
-        </section>
-
-        <br>
-        <div class="footer">
-            <p>Copyright Abhinav Bhatta</p>
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
-                <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>,
-                <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a>,
-                <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a>,
-                <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a>,
-                <a href="https://www.flaticon.com/authors/retinaicons" title="Retinaicons">Retinaicons</a>,
-                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </div>
-    </div>
-
-
-
-
-</body>
-
+    </body>
 </html>
