@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  //Instantiate granim for dynamic canvas
   var granimInstance = new Granim({
     element: '#granim-canvas',
     name: 'granim',
@@ -16,13 +17,34 @@ $(document).ready(function() {
       }
   }); 
 
-
-  applyDynamicCanvas()
-
+  //Find required height and width and apply; 
+  //Checks if screen is resized, and adjusts accordingly
+  applyDynamicCanvas();
+  
   $(window).on('resize', function(){
     applyDynamicCanvas()
   });
 
+  //Logic for showing/hiding mobile toggles.
+  var isNavOpen = false;
+  $('#mobileNavMenuContent').hide();
+  $('#navMenu').click(function(){
+    if(isNavOpen){
+      $('#mobileNavMenuContent').hide();
+    }
+    else{
+      $('#mobileNavMenuContent').show();
+    }
+    isNavOpen = !isNavOpen;
+  })
+
+  //Hides nav dropdown on click
+  $('a.navBookmark').click(function(){
+    $('#mobileNavMenuContent').hide();
+  })
+
+  
+  //Handle scrolling
   var mainHeight = $("#main").first().outerHeight();
   var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2+1000}});
 	// build scenes
